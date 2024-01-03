@@ -1,0 +1,24 @@
+footer{
+    background-color: #0F0C0F;
+    padding-inline: 1rem;
+    padding-block: 2rem;
+    height: 100%;
+    
+}
+footer ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #FF575F;
+}
+footer ul li{
+    margin-bottom: 1rem;
+    display: flex;
+}
+footer ul li a{
+    text-decoration: none;
+    color: white;
+    margin-left: 1rem;
+    width: 330px;
+    text-align: left;
+}

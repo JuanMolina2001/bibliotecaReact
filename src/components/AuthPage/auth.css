@@ -1,0 +1,48 @@
+#image {
+    transition: all 0.3s ease-in-out;
+}
+
+#form {
+    transition: all 0.3s ease-in-out;
+}
+
+.move-left {
+    transform: translate(100%, 0);
+}
+
+.move-right {
+    transform: translate(-100%, 0);
+}
+
+.image {
+    background-image: url('/public/assets/images/fondo-login.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.arrow {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+    height: 2rem;
+    width: 2rem;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    bottom: 50px;
+}
+
+.arrow-left{
+    background-image: url('/public/assets/images/arrow-left.svg');
+    left: 20px
+}
+
+.arrow-right {
+    background-image: url('/public/assets/images/arrow-right.svg');
+    right: 20px
+}
+
+.arrow:hover {
+    scale: 1.1;
+}
