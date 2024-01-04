@@ -15,7 +15,7 @@
 }
 
 .image {
-    background-image: url('/public/assets/images/fondo-login.jpg');
+    background-image: url('/src/assets/images/login.svg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -31,15 +31,16 @@
     border: none;
     transition: all 0.3s ease-in-out;
     bottom: 50px;
+    background-color: transparent;
 }
 
 .arrow-left{
-    background-image: url('/public/assets/images/arrow-left.svg');
+    background-image: url('/src/assets/images/arrow-left.svg');
     left: 20px
 }
 
 .arrow-right {
-    background-image: url('/public/assets/images/arrow-right.svg');
+    background-image: url('/src/assets/images/arrow-right.svg');
     right: 20px
 }
 

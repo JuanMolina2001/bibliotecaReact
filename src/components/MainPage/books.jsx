@@ -8,11 +8,11 @@ export const Books = () => {
     useEffect(() => {
         getBooks().then(data => {
            
-            // const books = data.maps(book => {
-            //     const url = fileStorage.getUrl(book.isbn)
-            //     return { ...book, url: url }
-            // })
-            // setBooks(books)
+            const books = data.map(book => {
+                const url = fileStorage.getUrl(book.isbn)
+                return { ...book, url: url }
+            })
+            setBooks(books)
         }).catch(err => {
             console.log(err)
         })
@@ -24,14 +24,14 @@ export const Books = () => {
                  {books.map((book) => {
                 return (
                     <div key={book.isbn} className='card my-4'>
-                        {console.log(book)}
                         <div className='card-header'>
                             <h5 className='card-title'>{book.titulo}</h5>
                         </div>
+                        {console.log(book.url)}
                         <div className='card-body'>
                             <p className='card-text'>isbn: {book.isbn}</p>
                             <p className='card-text'>{book.autor}</p>
-                            
+                            <img src={book.url.publicUrl} alt="" />
                         </div>
                     </div>
                 )

@@ -1,19 +1,20 @@
 import { useEffect, useState } from 'react'
 import { User } from '../../../services/user'
-import { validRut, validPassword } from '../valid'
+import { validRut, validPassword, formatRut } from '../valid'
 export const LoginComponent = () => {
   const [password, setPassword] = useState()
   const [rut, setRut] = useState()
   const error = document.getElementById('error')
   const [mensaje, setMensaje] = useState(null)
   useEffect(() => {
+    setRut(formatRut(rut))
     if (mensaje === null) {
       if (error) {
         error.style.display = 'none';
       }
     }
     try {
-      setRut(validRut(rut))
+      validRut(rut)
       setMensaje(null)
     } catch (error) {
       setMensaje(error.message)
